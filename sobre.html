@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfólio - Dev Bruno Oliveira</title>
+   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/43f6d38bcb.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+
+  <body>
+      <header>
+        <nav class="container">
+          <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div>
+            <ul id="nav-links">
+              <li><a href="index.html">Início</a></li>
+              <li><a href="sobre.html">Sobre Mim</a></li>
+              <li><a href="projetos.html">Projetos</a></li>
+            </ul>
+          </div>
+          <label class="switch">
+  <input type="checkbox" id="toggle-mode" />
+  <span class="slider"></span>
+</label>
+
+        </nav>
+    </header>
+  </body>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <h3>Email: brunooliver2015@outlook.com</h3>
+    <p>Entre em contato comigo pelas redes sociais ou email.</p>
+    <div class="social-links">
+      <a href="https://github.com/Dev-BrunoOliveira" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/bruno-oliveira-90a623275/"
+        target="_blank"
+      >
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </div>
+  </section>
+</main>
+  <section id="sobre-mim" class="hero">
+    <div class="content">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>Bem-vindo ao meu Portfólio</h2>
+          <p>
+            Olá, sou Bruno Oliveira, tenho 29 anos e moro em São Paulo, Brasil. Estudo Análise e Desenvolvimento de Sistemas na Faculdade FAM com previsão de conclusão em Agosto de 2027 e sempre fui apaixonado por tecnologia. Com o tempo, percebi que queria transformar esse interesse em carreira.
+            Iniciei minha jornada profissional no design e edição de imagens em uma agência, onde desenvolvi um olhar analítico e harmônico. Antes disso, trabalhei como tatuador, aprimorando minha percepção de composição, cores e detalhes. Hoje, aplico essa precisão na criação de peças visuais impactantes.
+          </p>
+        </div>
+        <div class="about-photo">
+          <img src="./IMG/20br.jpg" alt="Foto de Bruno Oliveira" />
+        </div>
+      </div>
+    </div>
+    <aside class="techs">
+
+      <div class="cards-container">
+        <div class="card-techs">
+          <img src="./IMG/techs/html.png" alt="Logo do HTML" />
+        </div>
+
+        <div class="card-techs">
+          <img src="./IMG/techs/css-3.png" alt="Logo do CSS3" />
+        </div>
+
+        <div class="card-techs">
+          <img src="./IMG/techs/java-script.png" alt="Logo do JavaScript" />
+        </div>
+        <div class="card-techs">
+          <img src="./IMG/techs/github.png" alt="Logo do github" />
+        </div>
+        <div class="card-techs">
+          <img src="./IMG/techs/react.png" alt="Logo do React" />
+        </div>
+        <div class="card-techs">
+          <img src="./IMG/techs/python.png" alt="Logo do Python" />
+        </div>
+        <div class="card-techs">
+          <img src="./IMG/techs/firebase.png" alt="Logo do Firebase" />
+        </div>
+        <div class="card-techs">
+          <img src="./IMG/techs/vite.png" alt="Logo do Vite" />
+        </div>
+      </div>
+    </aside>
+  </section>
+  <section id="curriculo" class="curriculo">
+    <h2>Meu Currículo</h2>
+    <p>Vamos construir o futuro juntos? Darei o meu melhor para agregar na sua empresa.</p>
+    <a href="./doc/BrunoDev[Front End].pdf" download class="btn">Baixar Currículo</a>
+  </section>
+  
+</html>
+
+  <script src="./script.js"></script>
+  <script>
+    const toggleBtn = document.getElementById('toggle-mode');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) {
+        toggleBtn.style.display = 'none';
+      } else {
+        toggleBtn.style.display = 'block';
+      }
+    });
+  </script>
+  
+</body>
+</html>
