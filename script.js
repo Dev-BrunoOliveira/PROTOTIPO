@@ -1,56 +1,59 @@
-const hamburger = document.querySelector(".hamburger");
-const nav = document.querySelector("nav");
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector("nav");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  nav.classList.toggle("active");
-});
-
-const nomeElemento = document.getElementById("nome");
-const texto = "Bruno Oliveira";
-let index = 0;
-
-function escrever() {
-  nomeElemento.innerHTML = "";
-  index = 0;
-  digitar();
-}
-
-function digitar() {
-  if (index < texto.length) {
-    nomeElemento.innerHTML += texto.charAt(index);
-    index++;
-    setTimeout(digitar, 150);
+  if (hamburger && nav) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      nav.classList.toggle("active");
+    });
   }
-}
 
-const toggleButton = document.getElementById("toggle-mode");
-const body = document.body;
+  const nomeElemento = document.getElementById("nome");
+  const texto = "Bruno Oliveira";
+  let index = 0;
 
-function aplicarTemaSalvo() {
-  const temaSalvo = localStorage.getItem("theme");
-  if (temaSalvo === "light") {
-    body.classList.add("light-mode");
-    if (toggleButton) toggleButton.checked = true;
-  } else {
-    body.classList.remove("light-mode");
-    if (toggleButton) toggleButton.checked = false;
+  function escrever() {
+    if (!nomeElemento) return;
+    nomeElemento.innerHTML = "";
+    index = 0;
+    digitar();
   }
-}
 
-if (toggleButton) {
-  toggleButton.addEventListener("change", () => {
-    if (toggleButton.checked) {
+  function digitar() {
+    if (index < texto.length) {
+      nomeElemento.innerHTML += texto.charAt(index);
+      index++;
+      setTimeout(digitar, 150);
+    }
+  }
+
+  const toggleButton = document.getElementById("toggle-mode");
+  const body = document.body;
+
+  function aplicarTemaSalvo() {
+    const temaSalvo = localStorage.getItem("theme");
+    if (temaSalvo === "light") {
       body.classList.add("light-mode");
-      localStorage.setItem("theme", "light");
+      if (toggleButton) toggleButton.checked = true;
     } else {
       body.classList.remove("light-mode");
-      localStorage.setItem("theme", "dark");
+      if (toggleButton) toggleButton.checked = false;
     }
-  });
-}
+  }
 
-window.onload = () => {
+  if (toggleButton) {
+    toggleButton.addEventListener("change", () => {
+      if (toggleButton.checked) {
+        body.classList.add("light-mode");
+        localStorage.setItem("theme", "light");
+      } else {
+        body.classList.remove("light-mode");
+        localStorage.setItem("theme", "dark");
+      }
+    });
+  }
+
   escrever();
   aplicarTemaSalvo();
-};
+});

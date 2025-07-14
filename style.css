@@ -185,7 +185,7 @@ h3 {
 }
 
 .card .btn {
-  background: #e20707;
+  background: #7133C2;
   color: #fff;
   padding: 0.5rem 1rem;
   text-decoration: none;
@@ -196,7 +196,7 @@ h3 {
 }
 
 .card .btn:hover {
-  background: #c20808;
+  background: #2d0c57;
   color: #ffffff;
 }
 
@@ -242,7 +242,7 @@ h3 {
 }
 
 .social-links a:hover {
-  color: #ff0000;
+  color: #7133C2;
   transform: scale(1.1);
 }
 
@@ -333,7 +333,7 @@ footer {
 
 #sobre-mim .card {
   background: #111;
-  border: 2px solid #ff0000;
+  border: 2px solid #7133C2;
   border-radius: 10px;
   padding: 1rem;
   width: 150px;
@@ -377,7 +377,7 @@ footer {
   display: inline-block;
   padding: 12px 25px;
   font-size: 1.2rem;
-  background-color: #ff0000;
+  background-color: #7133C2;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -385,7 +385,7 @@ footer {
 }
 
 .btn:hover {
-  background-color: #d81212;
+  background-color: #4e1b92;
 }
 
 #nome {
@@ -563,7 +563,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #f7d40f;
+  color: #7133C2;
 }
 
 .hamburger {
